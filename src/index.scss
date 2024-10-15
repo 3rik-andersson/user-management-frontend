@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./assets/fonts/avenir-next-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./assets/fonts/avenir-next-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./assets/fonts/avenir-next-italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./assets/fonts/avenir-next-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./assets/fonts/avenir-next-demi.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: 0px;
+
+    #root {
+        height: 100%;
+    }
+}
