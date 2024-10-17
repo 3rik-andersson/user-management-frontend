@@ -1,0 +1,46 @@
+$cyan: #39cdcc;
+$gray15: #545f7d26;
+
+$avenir-next: "Avenir Next";
+$work-sans: "Work Sans";
+
+@mixin link-style() {
+    font-family: Avenir Next;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16.39px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    background: transparent;
+    border: none;
+    width: fit-content;
+    padding: 0;
+    box-sizing: border-box;
+
+    cursor: pointer;
+    color: $cyan;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:active {
+        opacity: 0.8;
+    }
+}
+
+.link-broken-container {
+    @include link-style();
+
+    border-radius: 0 8px 8px 0;
+    border: solid $gray15;
+    border-width: 2px 2px 2px 0;
+
+    padding: 0 20px;
+
+    height: 48px;
+}
+
+.link-normal-container {
+    @include link-style();
+}

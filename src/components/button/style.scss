@@ -1,0 +1,60 @@
+$gray: #545f7d;
+$gray15: #545f7d26;
+$gray60: #545f7d99;
+$cyan: #39cdcc;
+
+$avenir-next: "Avenir Next";
+$work-sans: "Work Sans";
+
+@mixin button-style($height) {
+    height: $height;
+    box-sizing: border-box;
+
+    border: none;
+    outline: none;
+    padding: 0;
+
+    border-radius: 8px;
+    
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+
+    color: white;
+    background-color: $cyan;
+
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
+}
+
+.button-small-container {
+    font-family: $work-sans;
+    line-height: 16.42px;
+
+    @include button-style(40px);
+
+    padding: 0 30px;
+}
+
+.button-small-broken-container {
+    font-family: $work-sans;
+    line-height: 16.42px;
+
+    @include button-style(40px);
+    border-radius: 0 8px 8px 0;
+    padding: 0 21px;
+}
+
+.button-big-container {
+    font-family: $avenir-next;
+    line-height: 19.12px;
+
+    @include button-style(48px);
+}

@@ -1,0 +1,32 @@
+$secondary-color: #39CDCC;
+$base-color: #545F7D;
+$border-color: #545F7D26;
+$base-font: 'Work Sans';
+
+body {
+    .alarm-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        background-image: url("../../assets/icon/alarm.png");
+        background-size: 20px;
+
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none;
+
+        min-width: 30px;
+        height: 30px;
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+        &:active {
+            opacity: 0.6;
+        }
+    }
+}

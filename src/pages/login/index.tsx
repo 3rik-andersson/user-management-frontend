@@ -1,26 +1,27 @@
 import "./style.scss"
-import Logo from "../../assets/icon/lensqr.svg"
+import IconLogo from "../../assets/icon/lensqr.svg"
+import { Input } from "../../components/input"
+import { Link } from "../../components/link"
+import { Button } from "../../components/button"
 
-export const Login = () =>  {
+export const Login = () => {
     return (
         <div className="container">
             <div className="left">
-                <img src={Logo} className="logo"/>
+                <img src={IconLogo} className="logo" />
                 <div className="signin"/>
             </div>
             <div className="right">
                 <div className="form">
                     <h1>Welcome!</h1>
                     <p>Enter details to login.</p>
+                    <Input placeholder="Email" type="big" />
                     <div>
-                        <input placeholder="Email"/>
+                        <Input placeholder="Password" type="big-broken" />
+                        <Link type="broken">SHOW</Link>
                     </div>
-                    <div>
-                       <input placeholder="Password"/>
-                       <a>SHOW</a>
-                    </div>
-                    <a>FORGOT PASSWORD?</a>
-                    <button>LOG IN</button>
+                    <Link type="normal">FORGOT PASSWORD?</Link>
+                    <Button type="big">LOG IN</Button>
                 </div>
             </div>
         </div>

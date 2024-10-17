@@ -1,0 +1,69 @@
+$gray: #545f7d;
+$gray15: #545f7d26;
+$gray60: #545f7d99;
+$cyan: #39cdcc;
+
+$avenir-next: "Avenir Next";
+$work-sans: "Work Sans";
+
+@mixin input-style($height) {
+    width: 100%;
+    height: $height;
+    box-sizing: border-box;
+
+    border-radius: 8px;
+    border: $gray15 solid;
+    outline: none;
+    
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+
+    color: gray;
+
+    &::placeholder {
+        color: $gray60;
+    }
+}
+
+.input-small-container {
+    font-family: $work-sans;
+    line-height: 16.42px;
+
+    @include input-style(40px);
+    padding-left: 20px;
+
+    border-width: 1px;
+}
+
+.input-small-broken-container {
+    font-family: $work-sans;
+    line-height: 16.42px;
+
+    @include input-style(40px);
+    padding-left: 20px;    
+
+    border-radius: 8px 0 0 8px;
+    border-width: 1px 0 1px 1px;
+}
+
+.input-big-container {
+    font-family: $avenir-next;
+    line-height: 19.12px;
+
+    @include input-style(48px);
+    padding: 0 16px;
+
+    border-width: 2px;
+}
+
+.input-big-broken-container {
+    font-family: $avenir-next;
+    line-height: 19.12px;
+
+    @include input-style(48px);
+    padding: 0 16px;
+
+    border-radius: 8px 0 0 8px;
+    border-width: 2px 0 2px 2px;
+}
