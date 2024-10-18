@@ -8,6 +8,7 @@ $board-color: #FBFBFB;
     background-color: $board-color;
 
     width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: max-content auto;
     column-gap: 10px;
