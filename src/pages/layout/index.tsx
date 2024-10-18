@@ -1,10 +1,14 @@
 import "./style.scss"
-import { Header } from "../../components/header"
+import { Header } from "./header"
+import { Sider } from "./sider"
 
-export const Layout = () =>  {
+export const Layout = () => {
     return (
-        <>
-        <Header/>
-        </>
+        <div className="layout-container">
+            <Header />
+            <div className="layout-group">
+                <Sider />
+            </div>
+        </div>
     )
 }

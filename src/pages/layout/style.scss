@@ -1,5 +1,14 @@
 $board-color: #FBFBFB;
 
-body {
-  background-color: $board-color;
+.layout-container {
+  width: 100%;
+  height: 100%;
+
+  .layout-group {
+    background-color: $board-color;
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
 }
