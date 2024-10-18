@@ -1,4 +1,19 @@
-# React + TypeScript + Vite
+# <img src="./src/assets/icon/logo.svg"/> User Management Web Application 
+
+## Overview
+
+The User Management App is a simple web application designed to manage user accounts efficiently. It provides functionalities for user registration, login, profile management, and more. This app is built using modern web technologies and aims to offer a seamless user experience.
+
+## Features
+
+- User Registration
+- User Login
+- Profile Management
+- Password Reset
+- Role-Based Access Control
+- Responsive Design
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
