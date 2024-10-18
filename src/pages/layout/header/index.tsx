@@ -1,16 +1,16 @@
 import "./style.scss"
-import Logo from "../../assets/icon/lensqr.svg"
-import { Search } from "../search"
-import { AlarmButton } from "../alarm"
-import { Avatar } from "../avatar"
-import { Link } from "../link"
-import IconDown from "../../assets/icon/down.svg"
-import { Button } from "../button"
+import { Search } from "../../../components/search"
+import { AlarmButton } from "../../../components/alarm"
+import { Avatar } from "../../../components/avatar"
+import { Link } from "../../../components/link"
+import IconDown from "../../../assets/icon/down.svg"
+import { Button } from "../../../components/button"
+import { Logo } from "../../../components/logo"
 
 export const Header = () => {
     return (
         <div className="header-container">
-            <img src={Logo} />
+            <Logo/>
             <Search />
             <Link type="base">
                 Docs
