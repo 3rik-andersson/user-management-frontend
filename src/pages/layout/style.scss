@@ -8,7 +8,8 @@ $board-color: #FBFBFB;
     background-color: $board-color;
 
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: max-content auto;
+    column-gap: 10px;
   }
 }

@@ -5,10 +5,10 @@ import { Sider } from "./sider"
 export const Layout = () => {
     return (
         <div className="layout-container">
-            <Header />
             <div className="layout-group">
                 <Sider />
             </div>
+            <Header />
         </div>
     )
 }
