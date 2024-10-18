@@ -3,27 +3,25 @@ $base-color: #545f7d;
 $border-color: #545f7d26;
 $base-font: "Work Sans";
 
-body {
-    .avatar-button {
-        background-image: url("../../assets/icon/avatar.png");
-        background-size: cover;
-        background-color: transparent;
+.avatar-container {
+    background-image: url("../../assets/icon/avatar.png");
+    background-size: cover;
+    background-color: transparent;
 
-        border: none;
+    border: none;
 
-        min-width: 48px;
-        height: 48px;
+    min-width: 48px;
+    height: 48px;
 
-        border-radius: 50%;
+    border-radius: 50%;
 
-        cursor: pointer;
+    cursor: pointer;
 
-        &:hover {
-            opacity: 0.8;
-        }
+    &:hover {
+        opacity: 0.8;
+    }
 
-        &:active {
-            opacity: 0.6;
-        }
+    &:active {
+        opacity: 0.6;
     }
 }

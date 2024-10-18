@@ -1,10 +1,10 @@
 import "./style.scss"
-import { Menu } from "../../components/menu"
+import { Header } from "../../components/header"
 
 export const Layout = () =>  {
     return (
         <>
-        <Menu/>
+        <Header/>
         </>
     )
 }

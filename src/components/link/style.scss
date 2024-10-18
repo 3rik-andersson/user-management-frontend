@@ -1,23 +1,30 @@
 $cyan: #39cdcc;
 $gray15: #545f7d26;
+$blue: #213F7D;
 
 $avenir-next: "Avenir Next";
 $work-sans: "Work Sans";
 
-@mixin link-style() {
+%link-style {
+    padding: 0;
+    border: none;
+    outline: none;
+
+    width: fit-content;
+    box-sizing: border-box;
+    
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+
+%normal-link-style {
     font-family: Avenir Next;
     font-size: 12px;
     font-weight: 600;
     line-height: 16.39px;
     letter-spacing: 0.1em;
-    text-align: center;
-    background: transparent;
-    border: none;
-    width: fit-content;
-    padding: 0;
-    box-sizing: border-box;
 
-    cursor: pointer;
     color: $cyan;
 
     &:hover {
@@ -30,7 +37,8 @@ $work-sans: "Work Sans";
 }
 
 .link-broken-container {
-    @include link-style();
+    @extend %link-style;
+    @extend %normal-link-style;
 
     border-radius: 0 8px 8px 0;
     border: solid $gray15;
@@ -42,5 +50,26 @@ $work-sans: "Work Sans";
 }
 
 .link-normal-container {
-    @include link-style();
+    @extend %link-style;
+    @extend %normal-link-style;
+}
+
+.link-base-container {
+    @extend %link-style;
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+
+    text-decoration: underline;
+    color: $blue;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
 }

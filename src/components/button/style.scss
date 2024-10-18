@@ -2,17 +2,26 @@ $gray: #545f7d;
 $gray15: #545f7d26;
 $gray60: #545f7d99;
 $cyan: #39cdcc;
+$black10: #00000019;
+$black20: #00000033;
 
 $avenir-next: "Avenir Next";
 $work-sans: "Work Sans";
 
-@mixin button-style($height) {
-    height: $height;
-    box-sizing: border-box;
-
+%base-button-style {
     border: none;
     outline: none;
     padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin button-style($height) {
+    height: $height;
 
     border-radius: 8px;
     
@@ -22,8 +31,6 @@ $work-sans: "Work Sans";
 
     color: white;
     background-color: $cyan;
-
-    cursor: pointer;
 
     &:hover {
         opacity: 0.8;
@@ -38,6 +45,7 @@ $work-sans: "Work Sans";
     font-family: $work-sans;
     line-height: 16.42px;
 
+    @extend %base-button-style;
     @include button-style(40px);
 
     padding: 0 30px;
@@ -47,6 +55,7 @@ $work-sans: "Work Sans";
     font-family: $work-sans;
     line-height: 16.42px;
 
+    @extend %base-button-style;
     @include button-style(40px);
     border-radius: 0 8px 8px 0;
     padding: 0 21px;
@@ -56,5 +65,24 @@ $work-sans: "Work Sans";
     font-family: $avenir-next;
     line-height: 19.12px;
 
+    @extend %base-button-style;
     @include button-style(48px);
+}
+
+.button-icon-container {
+    @extend %base-button-style;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+
+    background-color: white;
+    
+    &:hover{
+        background-color: $black10;
+    }
+
+    &:active{
+        background-color: $black20;
+    }
 }

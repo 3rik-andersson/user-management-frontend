@@ -1,7 +1,7 @@
 import "./style.scss"
 
-export const AvatarButton = () =>  {
+export const Avatar = () =>  {
     return (
-        <button className="avatar-button"/>
+        <button className="avatar-container"/>
     )
 }
