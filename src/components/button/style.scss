@@ -77,9 +77,9 @@ $work-sans: "Work Sans";
 
     justify-content: center;
 
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 
     background-color: white;
 
@@ -124,5 +124,19 @@ $work-sans: "Work Sans";
         border: solid $cyan;
         border-width: 0 0 0 3px;
         opacity: 1;
+    }
+}
+
+.button-filter-container {
+    @extend %base-button-style;
+
+    background: transparent;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.6;
     }
 }

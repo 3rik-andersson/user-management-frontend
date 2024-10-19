@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: column;
     row-gap: 40px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     .users-page-heading {
         font-family: Work Sans;
@@ -62,6 +66,7 @@
     .users-page-userlist {
         background-color: white;
         box-shadow: 3px 5px 20px 0px #0000000a;
+        border-spacing: 0;
 
         th {
             font-family: Work Sans;
@@ -70,6 +75,15 @@
             line-height: 14.08px;
             text-align: left;
             color: colors.$gray;
+            padding: 14px 0;
+
+            div {
+                display: flex;
+                column-gap: 10px;
+                button {
+                    flex: 1;
+                }
+            }
         }
 
         td {
@@ -79,8 +93,27 @@
             line-height: 16.42px;
             text-align: left;
             color: colors.$gray;
+            padding: 16px 0;
+
+            border: solid colors.$gray10;
+            border-width: 1px 0 0 0;
         }
 
-        padding: 30px;
+        .first-row {
+            border: none;
+        }
+
+        .status {
+            background-color: colors.$gray15;
+            box-sizing: border-box;
+            text-align: center;
+            vertical-align: center;
+            border-radius: 15px;
+            padding: 7px 13px;
+            margin: 0;
+            width: max-content;
+        }
+
+        padding: 16px 30px 14px 30px;
     }
 }
