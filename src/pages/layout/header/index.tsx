@@ -10,7 +10,7 @@ import { Logo } from "../../../components/logo"
 export const Header = () => {
     return (
         <div className="header-container">
-            <Logo/>
+            <Logo type="small"/>
             <Search />
             <Link type="base">
                 Docs
