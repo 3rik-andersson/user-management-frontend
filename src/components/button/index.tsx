@@ -1,13 +1,13 @@
 import React from "react";
 import "./style.scss"
 
-interface Button {
+interface ButtonProps {
     type: string;
     children: React.ReactNode;
     disabled?: boolean;
 }
 
-export const Button: React.FC<Button> = (props) => {
+export const Button: React.FC<ButtonProps> = (props) => {
     const { children, type, disabled = false } = props;
 
     return (

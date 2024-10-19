@@ -41,6 +41,20 @@
 }
 
 @font-face {
+    font-family: 'Work Sans';
+    src: url('./assets/fonts/work-sans-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('./assets/fonts/work-sans-demi.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Roboto';
     src: url('./assets/fonts/roboto-regular.ttf') format('truetype');
     font-weight: normal;
