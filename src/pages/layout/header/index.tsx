@@ -10,17 +10,19 @@ import { Logo } from "../../../components/logo"
 export const Header = () => {
     return (
         <div className="header-container">
-            <Logo type="small"/>
+            <Logo type="small" />
             <Search />
             <Link type="base">
                 Docs
             </Link>
             <AlarmButton />
-            <Avatar />
-            <p>Adedeji</p>
-            <Button type="icon">
-                <img src={IconDown} />
-            </Button>
+            <div className="header-group">
+                <Avatar />
+                <Link type="name">Adedeji</Link>
+                <Button type="icon" url="/">
+                    <img src={IconDown} />
+                </Button>
+            </div>
         </div>
     )
 }
