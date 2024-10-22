@@ -1,0 +1,43 @@
+@use "../../consts/colors.scss";
+
+%status-style {
+    width: max-content;
+    height: 30px;
+    border-radius: 15px;
+    padding: 6px 12px;
+    box-sizing: border-box;
+
+    font-family: Work Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.42px;
+    text-align: center;
+}
+
+.status-inactive-container {
+    @extend %status-style;
+
+    color: colors.$gray;
+    background-color: colors.$gray06;
+}
+
+.status-pending-container {
+    @extend %status-style;
+
+    color: colors.$yellow;
+    background-color: colors.$yellow10;
+}
+
+.status-blacklisted-container {
+    @extend %status-style;
+
+    color: colors.$red;
+    background-color: colors.$red10;
+}
+
+.status-active-container {
+    @extend %status-style;
+
+    color: colors.$green;
+    background-color: colors.$green06;
+}

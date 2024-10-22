@@ -2,8 +2,11 @@ $gray: #545f7d;
 $gray15: #545f7d26;
 $gray60: #545f7d99;
 $cyan: #39cdcc;
+$cyan06: #39cdcc10;
 $black10: #00000019;
 $black20: #00000033;
+
+@use "../../consts/colors.scss";
 
 $avenir-next: "Avenir Next";
 $work-sans: "Work Sans";
@@ -17,20 +20,23 @@ $work-sans: "Work Sans";
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    column-gap: 10px;
 }
 
 @mixin button-style($height) {
     height: $height;
 
     border-radius: 8px;
-    
+
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.1em;
+    justify-content: center;
 
     color: white;
     background-color: $cyan;
+
+    padding: 0 30px;
 
     &:hover {
         opacity: 0.8;
@@ -72,17 +78,68 @@ $work-sans: "Work Sans";
 .button-icon-container {
     @extend %base-button-style;
 
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 
     background-color: white;
-    
-    &:hover{
+
+    &:hover {
         background-color: $black10;
     }
 
-    &:active{
+    &:active {
         background-color: $black20;
+    }
+}
+
+.button-menu-item-container {
+    @extend %base-button-style;
+
+    justify-content: left;
+
+    padding: 0 50px 0 30px;
+    min-height: 40px;
+    width: 100%;
+
+    color: colors.$blue;
+    background-color: transparent;
+
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.77px;
+    text-align: left;
+    opacity: 0.6;
+
+    &:hover {
+        background-color: $cyan06;
+    }
+
+    &:active {
+        opacity: 0.8;
+    }
+
+    &:disabled {
+        background-color: $cyan06;
+        border: solid $cyan;
+        border-width: 0 0 0 3px;
+        opacity: 1;
+    }
+}
+
+.button-filter-container {
+    @extend %base-button-style;
+
+    background: transparent;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.6;
     }
 }
