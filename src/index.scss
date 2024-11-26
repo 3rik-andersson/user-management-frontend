@@ -68,6 +68,8 @@ body {
     top: 0px;
     bottom: 0px;
     margin: 0px;
+    
+    box-sizing: border-box;
 
     #root {
         height: 100%;

@@ -1,0 +1,40 @@
+.modal-user-detail {
+    position: fixed;
+    width: 180px;
+    height: 130px;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: 3px 5px 20px 0px #0000000A;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #545F7D0A;
+
+    .button {
+        font-family: Work Sans;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.42px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        padding: 10px 20px;
+        width: 100%;
+        cursor: pointer;
+        border: none;
+        background-color: white;
+        color: #545F7D;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        &:hover {
+            background-color: #39CDCC0F;
+        }
+
+        &:active {
+            background-color: #39CDCC1E;
+        }
+    }
+}

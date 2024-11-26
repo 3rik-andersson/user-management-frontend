@@ -143,3 +143,26 @@ $work-sans: "Work Sans";
         opacity: 0.6;
     }
 }
+
+.button-text-container {
+    @extend %base-button-style;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: $work-sans;
+    font-size: 16px;
+    color: $gray;
+    background-color: transparent;
+
+    height: 30px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
+}
