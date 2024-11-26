@@ -1,0 +1,12 @@
+@use "../../consts/colors.scss";
+
+.page-userdetail {
+    padding: 160px 60px 60px 60px;
+
+    flex-direction: column;
+    row-gap: 40px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
