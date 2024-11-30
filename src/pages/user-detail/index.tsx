@@ -4,6 +4,7 @@ import IconBack from "../../assets/icon/icon-back.svg"
 import IconUnknownAvatar from "../../assets/icon/avatar.svg"
 import IconFullStar from "../../assets/icon/full-star.svg"
 import IconEmptyStar from "../../assets/icon/empty-star.svg"
+import { useState } from "react"
 
 export const UserDetail = () => {
 
@@ -18,11 +19,15 @@ export const UserDetail = () => {
         ],
     }
 
+    const [tabIndex, setTabIndex] = useState(0)
+
     return (
         <div className="page-userdetail">
             <Button type="text" url="/users"><img src={IconBack} />Back to Users</Button>
             <div className="header">
                 <h1>User Detail</h1>
+                <Button type="red-line">BLACKLIST USER</Button>
+                <Button type="blue-line">ACTIVATE USER</Button>
             </div>
             <div className="group">
                 <div className="main">
@@ -45,6 +50,14 @@ export const UserDetail = () => {
                         <h2>{`${user.currency}${user.price}`}</h2>
                         <p>{user.bankInfo}</p>
                     </div>
+                </div>
+                <div className="tab">
+                    <Button type="tab-item" disabled={tabIndex == 0} onClick={() => { setTabIndex(0) }}>General Details</Button>
+                    <Button type="tab-item" disabled={tabIndex == 1} onClick={() => { setTabIndex(1) }}>Documents</Button>
+                    <Button type="tab-item" disabled={tabIndex == 2} onClick={() => { setTabIndex(2) }}>Bank Details</Button>
+                    <Button type="tab-item" disabled={tabIndex == 3} onClick={() => { setTabIndex(3) }}>Loans</Button>
+                    <Button type="tab-item" disabled={tabIndex == 4} onClick={() => { setTabIndex(4) }}>Savings</Button>
+                    <Button type="tab-item" disabled={tabIndex == 5} onClick={() => { setTabIndex(5) }}>App and System</Button>
                 </div>
             </div>
             <div className="group">

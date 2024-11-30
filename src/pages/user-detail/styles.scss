@@ -14,6 +14,9 @@
 
     .header {
         margin: -10px 0 10px 0;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: auto max-content max-content;
     }
 
     .group {
@@ -25,6 +28,12 @@
         padding: 30px;
         display: grid;
         gap: 30px;
+
+        .tab {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
         hr {
             color: #545F7D;

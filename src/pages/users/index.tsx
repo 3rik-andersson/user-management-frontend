@@ -10,6 +10,7 @@ import { Button } from "../../components/button"
 import { useState } from "react"
 import { UserDetail as UserDetailModal } from "../../modals/user-detail"
 import { useNavigate } from "react-router-dom"
+import { Filter } from "../../modals/filter"
 
 export const Users = () => {
 
@@ -28,7 +29,23 @@ export const Users = () => {
     const [userDetailVisible, setUserDetailVisible] = useState(false);
     const [userDetailPosition, setUserDetailPosition] = useState({ x: 0, y: 0 });
     const [userDetailTarget, setUserDetailTarget] = useState(0);
+
+    const [filterVisible, setFilterVisible] = useState(false);
+    const [filterPosition, setFilterPosition] = useState({ x: 0, y: 0 });
+
     const naviagte = useNavigate();
+
+    const handleFilterButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        let cx = event.pageX - 130, cy = event.pageY;
+        if (cx > window.innerWidth - 300)
+            cx = window.innerWidth - 300;
+        if (cy > window.innerHeight - 600)
+            cy = window.innerHeight - 600;
+        if (cy < 130)
+            cy = 130
+        setFilterPosition({ x: cx, y: cy });
+        setFilterVisible(true);
+    }
 
     return (
         <div className="users-page-container">
@@ -37,8 +54,13 @@ export const Users = () => {
                     position={userDetailPosition}
                     onClose={() => { setUserDetailVisible(false) }}
                     onViewDetail={() => { naviagte(`/users/${userDetailTarget}`) }}
-                >
-                </UserDetailModal>
+                />
+            )}
+            {filterVisible && (
+                <Filter
+                    position={filterPosition}
+                    onClose={() => { setFilterVisible(false) }}
+                />
             )}
             <p className="users-page-heading">Users</p>
             <div className="users-page-analytic">
@@ -50,12 +72,12 @@ export const Users = () => {
             <table className="users-page-userlist">
                 <thead>
                     <tr>
-                        <th><div><p>ORGANIZATION</p><Button type="filter"><img src={IconFilter} /></Button></div></th>
-                        <th><div><p>USERNAME</p><Button type="filter"><img src={IconFilter} /></Button></div></th>
-                        <th><div><p>EMAIL</p><Button type="filter"><img src={IconFilter} /></Button></div></th>
-                        <th><div><p>PHONE NUMBER</p><Button type="filter"><img src={IconFilter} /></Button></div></th>
-                        <th><div><p>DATE JOINED</p><Button type="filter"><img src={IconFilter} /></Button></div></th>
-                        <th><div><p>STATUS</p><Button type="filter"><img src={IconFilter} /></Button></div></th>
+                        <th><div><p>ORGANIZATION</p><Button type="filter" onClickWithMouseEvent={handleFilterButtonClick}><img src={IconFilter} /></Button></div></th>
+                        <th><div><p>USERNAME</p><Button type="filter" onClickWithMouseEvent={handleFilterButtonClick}><img src={IconFilter} /></Button></div></th>
+                        <th><div><p>EMAIL</p><Button type="filter" onClickWithMouseEvent={handleFilterButtonClick}><img src={IconFilter} /></Button></div></th>
+                        <th><div><p>PHONE NUMBER</p><Button type="filter" onClickWithMouseEvent={handleFilterButtonClick}><img src={IconFilter} /></Button></div></th>
+                        <th><div><p>DATE JOINED</p><Button type="filter" onClickWithMouseEvent={handleFilterButtonClick}><img src={IconFilter} /></Button></div></th>
+                        <th><div><p>STATUS</p><Button type="filter" onClickWithMouseEvent={handleFilterButtonClick}><img src={IconFilter} /></Button></div></th>
                         <th></th>
                     </tr>
                 </thead>
