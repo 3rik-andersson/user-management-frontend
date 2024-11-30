@@ -5,6 +5,7 @@ $cyan: #39cdcc;
 $cyan06: #39cdcc10;
 $black10: #00000019;
 $black20: #00000033;
+$red: #E4033B;
 
 @use "../../consts/colors.scss";
 
@@ -55,6 +56,34 @@ $work-sans: "Work Sans";
     @include button-style(40px);
 
     padding: 0 30px;
+}
+
+.button-red-line-container {
+    font-family: $work-sans;
+    line-height: 16.42px;
+
+    @extend %base-button-style;
+    @include button-style(40px);
+
+    color: $red;
+    background-color: white;
+    border: 2px $red solid;
+
+    padding: 0 16px;
+}
+
+.button-blue-line-container {
+    font-family: $work-sans;
+    line-height: 16.42px;
+
+    @extend %base-button-style;
+    @include button-style(40px);
+
+    color: $cyan;
+    background-color: white;
+    border: 2px $cyan solid;
+
+    padding: 0 16px;
 }
 
 .button-small-broken-container {
@@ -130,6 +159,47 @@ $work-sans: "Work Sans";
     }
 }
 
+.button-tab-item-container {
+    @extend %base-button-style;
+
+    color: #000000CC;
+    background-color: transparent;
+
+    padding-bottom: 10px;
+    margin-bottom: -30px;
+
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.77px;
+
+    border-width: 0 0 2px 0;
+    border-color: transparent;
+    border-style: solid;
+
+    transition: all 0.3s;
+
+    &:hover {
+        border-color: $cyan;
+        color: $cyan;
+        padding: 0 20px 10px 20px;
+        opacity: 80%;
+    }
+
+    &:active {
+        color: $cyan;
+        padding: 0 20px 10px 20px;
+        opacity: 100%;
+    }
+
+    &:disabled {
+        color: $cyan;
+        border-color: $cyan;
+        padding: 0 20px 10px 20px;
+        opacity: 100%;
+    }
+}
+
 .button-filter-container {
     @extend %base-button-style;
 
@@ -151,8 +221,14 @@ $work-sans: "Work Sans";
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    font-family: $work-sans;
+    font-family: Work Sans;
     font-size: 16px;
+    font-weight: 400;
+    line-height: 18.77px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    
     color: $gray;
     background-color: transparent;
 
