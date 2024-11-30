@@ -69,9 +69,13 @@ body {
     bottom: 0px;
     margin: 0px;
     
-    box-sizing: border-box;
-
     #root {
         height: 100%;
     }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }

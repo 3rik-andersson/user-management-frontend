@@ -73,7 +73,7 @@ export const Users = () => {
                                     <td className={index == 0 ? "first-row" : ""}>
                                         <Button
                                             type="icon"
-                                            onClick={(event) => {
+                                            onClickWithMouseEvent={(event) => {
                                                 let cx = event.pageX - 90, cy = event.pageY - 40;
                                                 if (cx > window.innerWidth - 230)
                                                     cx = window.innerWidth - 230;
